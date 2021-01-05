@@ -1,0 +1,19 @@
+
+include header
+
+block content
+  h1 Enviar mensaje a otra pagina
+  form(method="post", action="/ver_mensaje")
+    label Asunto
+    br
+    input(type="text", name="asunto")
+    br
+    label Mensaje
+    br
+    textarea(cols="40", rows="10", name="mensaje")
+    br
+    input(type="submit", value="Enviar mensaje")
+    br
+    br
+
+include footer

@@ -1,0 +1,31 @@
+
+- var name = "Marco"
+- var surname = "Lopez"
+h1 Hello #{name} #{surname}!
+
+
+h3 Visitantes de mi web 
+- visits = {1:'John', 2:'Paul', 3:'Ringo', 4:'George'}
+ul
+  each value, key in visits
+    li #{key} #{value} 
+
+mixin users(users)
+  ol
+    each user in users
+      li= user
+- users = ['Tanya', 'Jose', 'Kim']
+mixin users(users)
+- more_users = ['Mark', 'Elena', 'Dave', 'Pete', 'Keiron']
+mixin users(more_users)
+
+- raining = true
+- if (raining)
+  p It is raining. Take an umbrella!
+- else
+  p No rain. Take the bike!
+
+h2 Inline JavaScript
+script.
+    // alert('Inline Javascript in Jade')
+    document.write("<p>Inline Javascript in Jade</p>");

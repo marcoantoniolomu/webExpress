@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+nav {
+  background-color:cadetblue;
+}
+
+section {
+  background-color:cadetblue;
+}
+
+p.pr1{
+  font-weight: bold;
+  text-align: center;
+}
+
+div {
+  padding: 15px 15px 15px 15px;
+}
+
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  font-size:xx-large;
+  color:blueviolet;
+}

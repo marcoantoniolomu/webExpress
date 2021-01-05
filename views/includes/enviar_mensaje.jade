@@ -1,0 +1,30 @@
+
+include header
+
+block content
+  h1 Enviar mensaje
+  form(method="post", action="/enviar_mensaje")
+    label Asunto
+    br
+    input(type="text", name="asunto")
+    br
+    label Mensaje
+    br
+    textarea(cols="40", rows="10", name="mensaje")
+    br
+    input(type="submit", value="Enviar mensaje")
+
+  // ul
+  -for (i in lista)
+    // Tendremos un bucle de repetición para cargar la lista de todos los mensajes enviados
+    // li ASUNTO: #{lista[i].asunto}
+    //li MENSAJE: #{lista[i].mensaje}
+    // li ---
+    - var asuntoForm = lista[i].asunto
+    - var mensajeForm = lista[i].mensaje
+         
+  h1 DATOS DEL FORMULARIO 
+  p ASUNTO: #{asuntoForm}
+  p MENSAJE: #{mensajeForm}
+
+include footer

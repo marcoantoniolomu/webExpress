@@ -48,5 +48,6 @@ app.get('/blog', routes.blog);
 app.get('/nuestraHistoria', routes.nuestraHistoria);
 app.get('/varLocal', routes.varLocal);
 
-app.listen(3000);
+// app.listen(3000);
+app.listen(port);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

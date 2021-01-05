@@ -7,6 +7,8 @@ var express = require('express')
   , routes = require('./routes');
   var mensajes = require('./routes/mensajes');
 
+var port = process.env.PORT || 3000;
+
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -21,11 +23,11 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  app.use(express.errorHandler());
 });
 
 // Routes
@@ -43,8 +45,8 @@ app.post('/ver_mensaje', routes.ver_mensaje);
 
 app.get('/index', routes.index);
 app.get('/sobreNosotros', routes.sobreNosotros);
-app.get('/servicios', routes.servicios); 
-app.get('/blog', routes.blog); 
+app.get('/servicios', routes.servicios);
+app.get('/blog', routes.blog);
 app.get('/nuestraHistoria', routes.nuestraHistoria);
 app.get('/varLocal', routes.varLocal);
 
